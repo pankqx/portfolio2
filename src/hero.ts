@@ -32,14 +32,18 @@ const ROASTS = [
   'Slept 4 hours. Shipped 6 repos.',
 ];
 
+export function playHeroIntro() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const chars = gsap.utils.toArray<HTMLElement>('[data-ch]');
+  gsap.fromTo(chars, { yPercent: 120, rotate: 12, opacity: 0 }, { yPercent: 0, rotate: 0, opacity: 1, duration: 1, stagger: 0.08, ease: 'power4.out' });
+  gsap.fromTo('.hero-sub, .hero-cta, .eyebrow, .scroll-hint', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, stagger: 0.12, delay: 0.4, ease: 'power3.out' });
+}
+
 export function initHero() {
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const chars = gsap.utils.toArray<HTMLElement>('[data-ch]');
 
-  if (!reduce) {
-    gsap.from(chars, { yPercent: 120, rotate: 12, opacity: 0, duration: 1, stagger: 0.08, ease: 'power4.out', delay: 0.1 });
-    gsap.from('.hero-sub, .hero-cta, .eyebrow, .scroll-hint', { y: 30, opacity: 0, duration: 0.8, stagger: 0.12, delay: 0.5, ease: 'power3.out' });
-  }
+  if (!reduce) gsap.set([chars, '.hero-sub', '.hero-cta', '.eyebrow', '.scroll-hint'], { opacity: 0 });
 
   // rotating roast line
   const rot = document.getElementById('rot')!;

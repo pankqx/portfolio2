@@ -79,13 +79,13 @@ export function initStory() {
     '(min-width: 820px)': () => {
       const track = document.getElementById('track')!;
       const dist = () => track.scrollWidth - window.innerWidth + window.innerWidth * 0.12;
-      gsap.to(track, {
+      const slide = gsap.to(track, {
         x: () => -dist(),
         ease: 'none',
         scrollTrigger: { trigger: '#workPin', start: 'top top', end: () => `+=${dist()}`, pin: true, scrub: 0.8, invalidateOnRefresh: true },
       });
       gsap.utils.toArray<HTMLElement>('.card').forEach((c, i) => {
-        gsap.from(c, { rotate: i % 2 ? 4 : -4, y: 40, opacity: 0.2, duration: 1, scrollTrigger: { trigger: c, containerAnimation: ScrollTrigger.getAll().pop()?.animation, start: 'left 95%', toggleActions: 'play none none reverse' } });
+        gsap.from(c, { rotate: i % 2 ? 4 : -4, y: 40, opacity: 0.2, duration: 1, scrollTrigger: { trigger: c, containerAnimation: slide, start: 'left 95%', toggleActions: 'play none none reverse' } });
       });
     },
   });
