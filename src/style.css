@@ -21,3 +21,17 @@ a { color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
 }
+
+/* ---------- boot ---------- */
+.boot { position: fixed; inset: 0; z-index: 100; background: #000; display: grid; place-items: center; padding: 6vw; }
+.boot-log { position: absolute; top: 6vw; left: 6vw; right: 6vw; color: var(--acid); font-size: clamp(11px, 2.4vw, 15px); line-height: 1.7; white-space: pre-wrap; }
+.boot-dialog { position: relative; width: min(440px, 92vw); background: #d4d0c8; color: #000; border: 2px solid #fff; box-shadow: 8px 8px 0 var(--hot); font-family: var(--mono); }
+.boot-title { background: linear-gradient(90deg, #00007b, #1084d0); color: #fff; padding: 4px 8px; display: flex; justify-content: space-between; font-size: 13px; }
+.boot-body { display: flex; gap: 14px; padding: 18px; align-items: flex-start; }
+.boot-body p + p { margin-top: 8px; }
+.boot-body .small { font-size: 12px; line-height: 1.5; }
+.boot-icon { flex: none; width: 38px; height: 38px; border-radius: 50%; background: var(--hot); color: #fff; display: grid; place-items: center; font-weight: 800; font-size: 22px; }
+.boot-actions { display: flex; gap: 10px; justify-content: flex-end; padding: 0 18px 18px; flex-wrap: wrap; }
+.boot-actions button { font-family: var(--mono); font-size: 13px; padding: 6px 14px; background: #d4d0c8; border: 2px solid; border-color: #fff #404040 #404040 #fff; cursor: pointer; color: #000; }
+.boot-actions button:active { border-color: #404040 #fff #fff #404040; }
+.boot-actions button:focus-visible { outline: 2px dotted #000; outline-offset: 2px; }
