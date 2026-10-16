@@ -74,7 +74,7 @@ export function initHero() {
       const dy = e.clientY - (b.top + b.height / 2);
       const d = Math.hypot(dx, dy);
       const f = Math.max(0, 1 - d / 420);
-      gsap.to(c, { x: dx * f * 0.12, y: dy * f * 0.12, rotate: dx * f * 0.04, duration: 0.5, overwrite: 'auto' });
+      gsap.to(c, { x: dx * f * 0.06, y: dy * f * 0.06, rotate: dx * f * 0.02, duration: 0.5, overwrite: 'auto' });
     });
   });
   document.addEventListener('pointerover', (e) => {
