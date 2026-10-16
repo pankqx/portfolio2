@@ -4,17 +4,19 @@ import { animate } from 'motion';
 export const heroHtml = `
 <div class="cursor" id="cursor" aria-hidden="true"><span id="cursorTxt"></span></div>
 <header class="nav">
-  <span class="mono">pank.exe</span>
+  <span class="mono">k s pankaj</span>
   <nav class="mono">
     <a href="#work" data-cur="look">work</a>
     <a href="#hack" data-cur="zzz">hackathon</a>
     <a href="#contact" data-cur="hire?">contact</a>
+    <a href="ascii/" data-cur="ascii">ascii</a>
   </nav>
 </header>
 <section class="hero" id="top">
   <p class="eyebrow">Portfolio v2 / now with fewer features and more jokes</p>
-  <h1 class="hero-name" id="heroName" aria-label="Pank">
-    <span class="ch" data-ch>P</span><span class="ch" data-ch>A</span><span class="ch" data-ch>N</span><span class="ch" data-ch>K</span>
+  <h1 class="hero-name" id="heroName" aria-label="K S Pankaj">
+    <span class="w initials" aria-hidden="true"><span class="ch" data-ch>K</span><span class="ch" data-ch>&nbsp;</span><span class="ch" data-ch>S</span></span>
+    <span class="w last" aria-hidden="true">${'PANKAJ'.split('').map((c) => `<span class="ch" data-ch>${c}</span>`).join('')}</span>
   </h1>
   <p class="hero-sub">MCA student in Mangaluru. I build software tools, hackathon entries and the occasional regret. <em id="rot">Sometimes they even work.</em></p>
   <div class="hero-cta">
@@ -43,7 +45,6 @@ export function initHero() {
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const chars = gsap.utils.toArray<HTMLElement>('[data-ch]');
 
-  if (!reduce) gsap.set([chars, '.hero-sub', '.hero-cta', '.eyebrow', '.scroll-hint'], { opacity: 0 });
 
   // rotating roast line
   const rot = document.getElementById('rot')!;
