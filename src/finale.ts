@@ -31,7 +31,7 @@ export const contactHtml = `
   <div class="hero-cta">
     <a class="btn magnet" id="mail" href="mailto:pankqx@gmail.com" data-cur="email">pankqx@gmail.com</a>
     <a class="btn ghost magnet" href="https://github.com/pankqx" target="_blank" rel="noopener" data-cur="code">GitHub</a>
-    <a class="btn ghost magnet" id="linkedin" href="https://www.linkedin.com/in/pankqz" target="_blank" rel="noopener" data-cur="connect">LinkedIn</a>
+    <a class="btn ghost magnet" id="linkedin" href="https://www.linkedin.com/in/pankqx" target="_blank" rel="noopener" data-cur="connect">LinkedIn</a>
     <a class="btn ghost magnet" id="resume" href="resume.pdf" target="_blank" rel="noopener" data-cur="cv">Resume</a>
   </div>
   <div class="crash-row"><button class="crash mono" id="crash" data-cur="don't">do not press this</button><a class="crash mono" href="ascii/" data-cur="ignore">or ignore everything &rarr; ascii mode</a></div>

@@ -70,7 +70,7 @@ root.innerHTML = `
       <nav class="links">
         <a href="mailto:${PERSON.email}">${PERSON.email}</a>
         <a href="${PERSON.github}" target="_blank" rel="noopener">github.com/pankqx</a>
-        <a href="${PERSON.linkedin}" target="_blank" rel="noopener">linkedin.com/in/pankqz</a>
+        <a href="${PERSON.linkedin}" target="_blank" rel="noopener">linkedin.com/in/pankqx</a>
         <a href="../${PERSON.resume}" target="_blank" rel="noopener">resume.pdf</a>
       </nav>
       <p class="fine">uptime <span id="uptime">0s</span> · no photos were harmed, only quantised.</p>

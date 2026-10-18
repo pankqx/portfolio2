@@ -12,7 +12,7 @@ export const PERSON = {
   place: 'Mangaluru, India',
   email: 'pankqx@gmail.com',
   github: 'https://github.com/pankqx',
-  linkedin: 'https://www.linkedin.com/in/pankqz',
+  linkedin: 'https://www.linkedin.com/in/pankqx',
   resume: 'resume.pdf',
 };
 
